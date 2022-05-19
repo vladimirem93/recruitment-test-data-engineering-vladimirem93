@@ -35,6 +35,13 @@ services:
     command: ["./example.py"]
     volumes:
       - ./data:/data
+      
+  csv-load-python:
+    image: csv-load-python
+    build: images/csv-load-python
+    command: ["./csv-load.py"]
+    volumes: 
+    - ./data:/data
 
   example-r:
     image: example-r
